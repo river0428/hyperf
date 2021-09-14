@@ -75,6 +75,6 @@ class InstanceBeatProcess extends AbstractProcess
     public function isEnable($server): bool
     {
         $config = $this->container->get(ConfigInterface::class);
-        return $config->get('nacos.service.enable', true) && $config->get('nacos.service.instance.heartbeat', 0);
+        return $config->get('nacos.service.enable', true);
     }
 }
